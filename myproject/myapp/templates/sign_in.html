@@ -34,19 +34,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfoWy2dlCgfiMRbzYBZZlvPhAhKTOMoX0Rg&s" width="90" height="60">
-    <a class="navbar-brand" href="#">Venus</a>
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfoWy2dlCgfiMRbzYBZZlvPhAhKTOMoX0Rg&s" width="90" height="60"> -->
+    <a class="navbar-brand" href="#" style="font-style: italic;font-size: xx-large;">Vaibhav</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>&nbsp;&NonBreakingSpace;
-    <form class="d-flex">
+    </button>
+    
+    
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
@@ -63,6 +65,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'display' %}">Display</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'edit' %}">Edit</a>
+        </li>
       </ul>
       <i class="fa-solid fa-moon"></i>&nbsp;&nbsp;
 <a href="{% url 'signin' %}">
@@ -75,6 +83,7 @@
     </div>
   </div>
 </nav>
+
 
         <form id="form">
             <h2 style="text-align: center;color: white;">Log in</h2><br>

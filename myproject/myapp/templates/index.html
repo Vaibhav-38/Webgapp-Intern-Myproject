@@ -22,19 +22,21 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfoWy2dlCgfiMRbzYBZZlvPhAhKTOMoX0Rg&s" width="90" height="60">
-    <a class="navbar-brand" href="#">Venus</a>
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfoWy2dlCgfiMRbzYBZZlvPhAhKTOMoX0Rg&s" width="90" height="60"> -->
+    <a class="navbar-brand" href="#" style="font-style: italic;font-size: xx-large;">Vaibhav</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>&nbsp;&NonBreakingSpace;
-    <form class="d-flex">
+    </button>
+    
+    
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
@@ -51,6 +53,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'display' %}">Display</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'edit' %}">Edit</a>
+        </li>
       </ul>
       <i class="fa-solid fa-moon"></i>&nbsp;&nbsp;
 <a href="{% url 'signin' %}">
@@ -63,7 +71,7 @@
     </div>
   </div>
 </nav>
-<div class="container">
+
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -73,13 +81,13 @@
   <div class="carousel-inner">
 
     <div class="carousel-item active">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzrY0vjWei7Zg-SLCp2o_XFn-K-xTOEVAPrA&s"  class="d-block w-100 img fluid" >
+      <img src="https://wallpapercave.com/wp/wp4469788.jpg"  class="d-block w-100 img-fluid " >
     </div>
     <div class="carousel-item">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiKJ5jJ2u1e4jpeyyvARsvgAtncKdSTnvEQw&s"  class="d-block w-100 img fluid">
+      <img src="https://wallpaperaccess.com/full/799794.jpg"  class="d-block w-100 img-fluid">
     </div>
     <div class="carousel-item">
-      <img src="data:image/jpeg;base64,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"  class="d-block w-100 img fluid">
+      <img src="https://images.hdqwalls.com/download/tom-and-jerry-2021-1y-1920x1080.jpg"  class="d-block w-100 img-fluid">
     </div>
   
   </div>
@@ -92,7 +100,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-</div>
+
 </div><br><br>
 
 
@@ -232,6 +240,94 @@
     <p>Dive into a curated collection of my finest work, showcasing expertise across various industries.</p>
   </center>
 </div><br><br>
+ <center>
+    <h1>About Us</h1>
+    <div id="para">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos incidunt voluptatem modi eaque iste magni, vel exercitationem sapiente, at, possimus iure explicabo molestiae repellendus totam doloremque error natus provident.</p>
+    </div>
+    </center>
+
+<div class="container my-5">
+  <div class="row align-items-center">
+
+    
+    <div class="col-md-6 text-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+           class="img-fluid"
+           alt="Services"
+           style="max-width: 300px;">
+    </div>
+
+    
+    <div class="col-md-6">
+      <h2>Our Services</h2>
+      <p>We provide reliable and high-quality services to support your growth.</p>
+
+      <ul>
+        <li>Website Design & Development</li>
+        <li>Mobile App Development</li>
+        <li>UI / UX Design</li>
+        <li>Backend Services</li>
+        <li>Maintenance & Support</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="row my-5 align-items-center">
+
+
+  <div class="col-md-6 text-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png"
+         class="img-fluid"
+         style="max-width: 80%;">
+  </div>
+
+
+  <div class="col-md-6">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us anytime.</p>
+
+    <form method="post">
+
+      <label>Full Name</label><br>
+      <input type="text" class="form-control mb-3" placeholder="Enter your name">
+
+      <label>Email</label><br>
+      <input type="email" class="form-control mb-3" placeholder="Enter your email">
+
+      <label>Age</label><br>
+      <input type="number" class="form-control mb-3" placeholder="Enter your age">
+
+      <label>Message</label><br>
+      <textarea class="form-control mb-3" rows="4" placeholder="Your message"></textarea>
+
+      <button type="submit" class="btn btn-primary">
+        Send Message
+      </button>
+    </form>
+  </div>
+
+</div>
+
 
 
 <!-- Footer -->
